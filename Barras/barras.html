@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RGB Mixer</title>
+  <link rel="stylesheet" href="barras.css" />
+
+</head>
+<body>
+
+  <!-- Fondo con glow dinámico -->
+  <div class="bg-glow" id="bgGlow"></div>
+
+  <!-- Contenedor principal -->
+  <div class="container">
+
+    <p class="title">Mezclador de color</p>
+    <h1 class="heading">RGB<br>Mixer</h1>
+
+    <!-- Vista previa del color -->
+    <div class="preview" id="preview">
+      <span class="preview-hex" id="previewHex">#FF0050</span>
+    </div>
+
+    <!-- Sliders R, G, B -->
+    <div class="sliders">
+
+      <div class="slider-row">
+        <div class="slider-label">
+          <span class="slider-name red">R — Rojo</span>
+          <span class="slider-value" id="rVal">255</span>
+        </div>
+        <input type="range" id="r-slider" min="0" max="255" value="255" step="1" />
+      </div>
+
+      <div class="slider-row">
+        <div class="slider-label">
+          <span class="slider-name green">G — Verde</span>
+          <span class="slider-value" id="gVal">0</span>
+        </div>
+        <input type="range" id="g-slider" min="0" max="255" value="0" step="1" />
+      </div>
+
+      <div class="slider-row">
+        <div class="slider-label">
+          <span class="slider-name blue">B — Azul</span>
+          <span class="slider-value" id="bVal">80</span>
+        </div>
+        <input type="range" id="b-slider" min="0" max="255" value="80" step="1" />
+      </div>
+
+    </div>
+
+    <!-- Tarjetas de información -->
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="info-label">HEX</div>
+        <div class="info-value" id="infoHex">#FF0050</div>
+      </div>
+      <div class="info-card">
+        <div class="info-label">RGB</div>
+        <div class="info-value" id="infoRgb">255, 0, 80</div>
+      </div>
+      <div class="info-card">
+        <div class="info-label">Brillo</div>
+        <div class="info-value" id="infoBright">112</div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="barras.js"></script>
+</body>
+</html>
